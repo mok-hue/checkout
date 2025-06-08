@@ -15,6 +15,15 @@
             line-height: 1.6;
         }
 
+        .header-image {
+            width: 100%;
+            max-height: 200px;
+            object-fit: cover;
+            border-radius: 10px;
+            margin-bottom: 20px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
+        }
+
         h1 {
             color: #9c7aff;
             text-align: center;
@@ -106,6 +115,9 @@
     </style>
 </head>
 <body>
+    <!-- Добавленная картинка -->
+    <img src="https://via.placeholder.com/600x200/3a3a3a/9c7aff?text=Contact+Us" alt="Header Image" class="header-image">
+    
     <div class="form-container">
         <h1>Потерялся?</h1>
         <form action="https://formspree.io/f/xldnjelp" method="POST">
