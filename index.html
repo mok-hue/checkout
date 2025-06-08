@@ -9,12 +9,15 @@
 <body>
     <div class="container">
         <h1>Обратная связь</h1>
-        <form id="feedbackForm">
-            <input type="text" name="name" placeholder="Ваше имя" required>
-            <input type="email" name="email" placeholder="Ваш email" required>
-            <textarea name="message" placeholder="Ваше сообщение" required></textarea>
-            <button type="submit">Отправить</button>
-        </form>
+        <form action="https://formsubmit.co/ваш-email@gmail.com" method="POST">
+    <input type="hidden" name="_next" value="https://ваш-username.github.io/feedback-site/thanks.html">
+    <input type="hidden" name="_subject" value="Новое сообщение с сайта">
+    <input type="hidden" name="_captcha" value="false">
+    <input type="text" name="name" placeholder="Ваше имя" required>
+    <input type="email" name="email" placeholder="Ваш email" required>
+    <textarea name="message" placeholder="Ваше сообщение" required></textarea>
+    <button type="submit">Отправить</button>
+</form>
         <p id="response"></p>
     </div>
     <script src="script.js"></script>
