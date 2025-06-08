@@ -4,22 +4,24 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Форма обратной связи</title>
-    <link rel="stylesheet" href="style.css">
+    <style>
+        body { font-family: Arial, sans-serif; padding: 20px; max-width: 600px; margin: 0 auto; }
+        input, textarea { width: 100%; padding: 10px; margin-bottom: 10px; }
+        button { background: #4CAF50; color: white; border: none; padding: 10px 20px; cursor: pointer; }
+    </style>
 </head>
 <body>
-    <div class="container">
-        <h1>Обратная связь</h1>
-        <form action="https://formsubmit.co/ваш-email@gmail.com" method="POST">
-    <input type="hidden" name="_next" value="https://ваш-username.github.io/feedback-site/thanks.html">
-    <input type="hidden" name="_subject" value="Новое сообщение с сайта">
-    <input type="hidden" name="_captcha" value="false">
-    <input type="text" name="name" placeholder="Ваше имя" required>
-    <input type="email" name="email" placeholder="Ваш email" required>
-    <textarea name="message" placeholder="Ваше сообщение" required></textarea>
-    <button type="submit">Отправить</button>
-</form>
-        <p id="response"></p>
-    </div>
-    <script src="script.js"></script>
+    <h1>Оставьте отзыв</h1>
+    <form action="https://formsubmit.co/doktirmoki@bk.ru" method="POST">
+        <!-- Обязательные скрытые поля для FormSubmit -->
+        <input type="hidden" name="_captcha" value="false"> <!-- Отключает капчу -->
+        <input type="hidden" name="_next" value="mok-hue/checkout/blob/main/thanks.html"> <!-- Куда переадресовать после отправки -->
+        
+        <!-- Поля формы -->
+        <input type="text" name="Имя" placeholder="Ваше имя" required>
+        <input type="email" name="Email" placeholder="Ваш email" required>
+        <textarea name="Сообщение" placeholder="Ваш отзыв" required></textarea>
+        <button type="submit">Отправить</button>
+    </form>
 </body>
 </html>
